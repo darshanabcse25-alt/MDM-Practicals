@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Interactive FAQ</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-r from-red-400  to-lime-400 flex items-center justify-center">
+
+    <div class="bg-gradient-to-r from-cyan-200  to-emerald-200 p-8 rounded-2xl shadow-lg w-lg  ">
+
+        <h2 class="text-3xl font-semibold text-center text-green-900 mb-6">
+            Computer Science Help Portal
+        </h2>
+
+        <p class="text-center mb-5 text-pink-950 text-2xl">
+            Frequently Asked Questions
+        </p>
+
+
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-sky-500 to-pink-500 text-white rounded">
+                What is HTML?
+            </button>
+
+            <p class="answer hidden p-3 bg-purple-50">
+                HTML stands for HyperText Markup Language. It is used to create the structure of web pages.
+            </p>
+        </div>
+
+
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-sky-500 to-pink-500 text-white rounded">
+                What is JavaScript?
+            </button>
+
+            <p class="answer hidden p-3 bg-purple-50">
+                JavaScript is a programming language used to make web pages interactive and dynamic.
+            </p>
+        </div>
+
+
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-sky-500 to-pink-500 text-white rounded">
+                What is Tailwind CSS?
+            </button>
+
+            <p class="answer hidden p-3 bg-purple-50">
+                Tailwind CSS is a utility-first CSS framework used to quickly design responsive websites.
+            </p>
+        </div>
+
+
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-sky-500 to-pink-500 text-white rounded">
+                What is a programming language?
+            </button>
+
+            <p class="answer hidden p-3 bg-purple-50">
+                A programming language is used to give instructions to a computer, such as C, C++, Java and Python.
+            </p>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-sky-500 to-pink-500 text-white rounded">
+                What is a web browser?
+            </button>
+
+            <p class="answer hidden p-3 bg-purple-50">
+                A web browser is software used to access and view websites, such as Chrome, Firefox and Edge.
+            </p>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // Get all questions
+        let questions = document.querySelectorAll(".question");
+
+        // Add click event to each question
+        questions.forEach(function (question) {
+
+            question.addEventListener("click", function () {
+
+                // Get the answer
+                let answer = question.nextElementSibling;
+
+                // Show / Hide answer
+                answer.classList.toggle("hidden");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
